@@ -1,0 +1,221 @@
+@import 'GoogleFonts';
+@import 'ResetCode';
+@import 'ColorCode';
+@import 'Sellpage';
+
+
+// Card Wrapper Design
+
+@mixin Card-Wrapper($Sixe) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap: $Sixe;
+    justify-content: space-around;
+}
+
+
+
+
+// Header and Nav Section style
+
+header{
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    background-color: $Nav-bg;
+    overflow: hidden;
+    z-index: 3;
+    nav{
+        ul{
+            list-style-type: none;
+            li{
+                display: block;
+                margin: 0px 10px;
+                a{
+                  display: block;
+                  padding: 10px;
+                  font-family:$nav-Fonts;
+                  color: $Nav-color;
+                }
+                :hover{
+                    color: $Nav-hoverColor;
+                }
+                :active{
+                    color: $Nav-activeColor;
+                }
+            }
+
+        }
+    }
+   
+      
+}
+
+
+
+
+// Root Section
+
+.root-section{
+    width: 80%;
+    height: 100%;
+    background-color: FFFFFF;
+    position: absolute;
+    right: 0px;
+    z-index: 2;
+    
+    // head-setting style
+    .head-option{
+        width: 100%;
+        padding: 5px 0px;
+        overflow: hidden;
+        ul{
+            list-style-type: none;
+            float: right;
+            li{
+               display: inline;
+               a{
+                 padding: 0px 10px;   
+                 color: aqua;
+                 .fa{
+                    color: $Icon-color;  
+                  }
+                  .fa:hover{
+                      color: $Icon-HoverColor;
+                  }
+                  .fa:active{
+                      color: $Icon-ActiveColor;
+                  }
+               }
+            }
+
+        }
+    }
+
+}
+
+
+.Title-product{
+  color: #db1e47;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-left: 10px;
+  margin-bottom: 20px
+}
+
+#Electronic-devices,#Electronic-accessories{
+ @include Card-Wrapper(30px);
+ .Card{
+    background-color: #FFFFFF; 
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    -webkit-box-shadow: inset 5px 5px 13px 5px rgba(166,231,255,0.71); 
+     box-shadow: inset 5px 5px 13px 5px rgba(166,231,255,0.71);
+    img{
+        margin-bottom: 10px;
+          p{
+            color: $Product-TextColor;  
+          }  
+    }
+    h5{
+      color: $Product-TitleColor;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    p{
+      color: $Product-TextColor;  
+      margin-bottom: 10px;
+    }
+    button{
+       padding: 7px 15px; 
+       border-radius: 4px;
+       border: none;
+       background-color: #20bf6b;
+       color: #ffff;
+       cursor: pointer;
+       transition: all 1s;
+       
+    }
+    button:hover{
+        background-color: #ee5253; 
+     }
+ }
+}
+
+
+
+// Footer Section
+
+footer{
+ width: 75%;
+ padding: 6px 0px;
+ background-color: $Footer-bg;   
+ z-index:3;
+ position: absolute;
+ right: 0px;
+ bottom: 0px;
+ 
+ p{
+     text-align: center;
+     color: $Footer-textColor;
+     font-family: $footer-Fonts;
+ }
+ 
+}
+
+
+
+
+
+// Sell-Page 
+
+.Sell-Body{
+  background-color: black  
+}
+
+.Sell-wrapper{
+    @include Middle-Wrapp(#dff9fb);
+    .Sell-Content{
+        @include Card-Wrapper(#ffff)
+        
+    }
+}
+
+.Order-Action{
+    text-align: center;
+   .lebelId{
+      display: block;
+      margin-bottom: 10px;
+      color: #20bf6b;
+   }
+  
+   input[type="number"],select{
+      width: 100%;
+      padding: 3px 3px;
+      border: none;
+      outline: none;
+      background-color: #f5f6fa;
+      margin-bottom: 5px;
+   }
+
+   input[type="submit"]{
+       width: 100%;
+       padding: 6px ;
+       margin-top: 10px;
+       cursor: pointer;
+       border: none;
+       outline: none;
+       background: #20bf6b;
+       color: #ffff;
+       transition: all 1s;
+   }
+   input[type="submit"]:hover{
+       background: #db1e47;
+   }
+
+  
+  
+
+}

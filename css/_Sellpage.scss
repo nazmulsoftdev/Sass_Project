@@ -1,0 +1,15 @@
+
+
+ @mixin Middle-Wrapp($Color) {
+    width: 60%;
+    height: 350px;
+    padding: 20px;
+    background-color:$Color;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    margin: auto;
+   
+}
